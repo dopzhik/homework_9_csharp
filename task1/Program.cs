@@ -11,19 +11,11 @@ int ReadInt(string msg)
 
 void EvenNumbers(int n, int m)
 {
-    if (n >= m)
-    {
-        return;
-    }
-    if (n % 2 == 0)
-    {
-        System.Console.WriteLine(n);
-    }
-    else
-    {
-        System.Console.WriteLine(n+1);
-    }
-    EvenNumbers(n+2, m);
+    if (n > m) return;
+    if (n % 2 == 1) n++;
+    System.Console.WriteLine(n);
+    n += 2;
+    EvenNumbers(n, m);
 }
 
 int n = ReadInt("Введите число N => ");
